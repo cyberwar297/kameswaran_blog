@@ -1,6 +1,10 @@
+import Seo from '../components/Seo'
+import { SITE_NAME } from '../config/site'
+
 export default function Home() {
   return (
     <section className="content-panel">
+      <Seo title={SITE_NAME} path="/home" />
       <p>Hi,</p>
         <p>
         I'm <strong>Kameswaran Jayagopal</strong>, a cybersecurity professional

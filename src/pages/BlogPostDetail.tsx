@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { blogPosts } from '../data/blogPosts'
+import Seo from '../components/Seo'
 
 export default function BlogPostDetail() {
   const { slug } = useParams()
@@ -8,6 +9,7 @@ export default function BlogPostDetail() {
   if (!post) {
     return (
       <section className="content-panel">
+        <Seo title="Post not found" path={`/blog/${slug ?? ''}`} noindex />
         <h1>Post not found</h1>
         <p>
           <Link to="/blog">Back to Blog</Link>
@@ -18,6 +20,12 @@ export default function BlogPostDetail() {
 
   return (
     <section className="content-panel post-detail">
+      <Seo
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        type="article"
+      />
       <p className="post-detail-meta">
         {post.date} <span aria-hidden="true">/</span> {post.tags.join(' ')}
       </p>

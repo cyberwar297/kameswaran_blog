@@ -46,7 +46,7 @@ function App() {
               <Route
                 key={page.path}
                 path={page.path}
-                element={<PageTemplate title={page.title} />}
+                element={<PageTemplate title={page.title} path={page.path} />}
               />
             ))}
         </Routes>

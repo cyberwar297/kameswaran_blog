@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { RESEARCH_POSTS_PER_PAGE, researchPosts } from '../data/researchPosts'
+import Seo from '../components/Seo'
 
 export default function Research() {
   const [query, setQuery] = useState('')
@@ -27,6 +28,11 @@ export default function Research() {
 
   return (
     <section className="blog-layout">
+      <Seo
+        title="Research"
+        description="In-depth research write-ups on AI security, detection engineering, and offensive security."
+        path="/research"
+      />
       <aside className="blog-meta">
         <h1>Research</h1>
         <p className="blog-stat">
