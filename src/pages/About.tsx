@@ -1,3 +1,5 @@
+import Seo from '../components/Seo'
+
 type Role = {
   title: string
   company: string
@@ -81,6 +83,11 @@ const enjoy = [
 export default function About() {
   return (
     <section className="blog-layout">
+      <Seo
+        title="About"
+        description="Technical Architect - AI &amp; Cloud Security. Background, work experience, and values of Kameswaran Jayagopal."
+        path="/about"
+      />
       <aside className="blog-meta">
         <h1>About</h1>
         <p className="blog-stat">Technical Architect — AI &amp; Cloud Security</p>

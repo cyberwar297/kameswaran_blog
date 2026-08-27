@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { LAB_FOUNDED_YEAR, POSTS_PER_PAGE, blogPosts, contentFilters } from '../data/blogPosts'
+import Seo from '../components/Seo'
 
 export default function Blog() {
   const [query, setQuery] = useState('')
@@ -32,6 +33,11 @@ export default function Blog() {
 
   return (
     <section className="blog-layout">
+      <Seo
+        title="Blog"
+        description="Essays and write-ups on AI security, cloud security, and detection engineering from ongoing research."
+        path="/blog"
+      />
       <aside className="blog-meta">
         <h1>Blog</h1>
         <p className="blog-stat">

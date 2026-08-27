@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ideaRows } from '../data/ideas'
+import Seo from '../components/Seo'
 
 const trackingReasons = [
   'To remember what I was actually thinking before the details fade',
@@ -11,6 +12,11 @@ const trackingReasons = [
 export default function Ideas() {
   return (
     <section className="ideas-page">
+      <Seo
+        title="Ideas"
+        description="Working theories and early-stage ideas in AI security and cybersecurity research."
+        path="/ideas"
+      />
       <header className="ideas-header">
         <h1>Ideas</h1>
         <p className="ideas-subtitle">Working theories I want to keep track of</p>

@@ -1,6 +1,9 @@
-export default function PageTemplate({ title }: { title: string }) {
+import Seo from '../components/Seo'
+
+export default function PageTemplate({ title, path }: { title: string; path?: string }) {
   return (
     <section className="content-panel">
+      <Seo title={title} path={path} noindex />
       <h1>{title}</h1>
       <p>
         This page is prepared as a framework placeholder. Share the exact visual

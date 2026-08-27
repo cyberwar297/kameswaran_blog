@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import { projects } from '../data/projects'
+import Seo from '../components/Seo'
 
 export default function Projects() {
   const [selectedRepo, setSelectedRepo] = useState<string | null>(null)
 
   return (
     <section className="blog-layout">
+      <Seo
+        title="Projects"
+        description="Open source tools and frameworks by Kameswaran Jayagopal."
+        path="/projects"
+      />
       <aside className="blog-meta">
         <h1>Projects</h1>
         <p className="blog-stat">June 2026</p>
